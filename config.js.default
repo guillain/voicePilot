@@ -1,0 +1,59 @@
+/**
+ * @file Main programme - VoicePilot
+ * @author guillain (guillain@gmail.com)
+ * @license GPL-3.0
+ */
+
+var config = {};
+
+config.name = 'VoicePilot';
+config.debug = '1';
+config.url = 'http://';
+
+// Flint
+config.address = '0.0.0.0';
+config.port = '8085';
+
+// Spark
+config.sparkbot = 'voicepilot@sparkbot.io';
+config.webhookUrl = config.url+':'+config.port+'/flint';
+config.token = '';
+
+// Twilio
+config.twilio = {};
+config.twilio.myPhoneNb = '';
++33624802136';
+config.twilio.pilotPhoneNb = '';
++14388003168';
+config.twilio.accountSid = '';
+config.twilio.authToken = '';
+config.twilio.url = 'http://demo.twilio.com/docs/voice.xml';
+config.twilio.portInCall = '8086';
+config.twilio.inboundCallMsg = 'Hello, welcome on the new Voice Pilot system!';
+config.twilio.outboundCallMsg = 'Hello, I\'m calling from Voice Pilot system!';
+config.twilio.requestCmdMsg = 'thanks to order your commands, I\'m waiting you';
+config.twilio.xmlpath = '/var/www/voicePilot/xml';
+config.twilio.orderCmd = 'order_cmd.xml';
+
+// Cmd
+config.cmd = {};
+config.cmd.storage = 'cmd';
+config.cmd.help = '\\[cmd] \n';
+
+// Google search
+config.search = {};
+config.search.google_cse_key = '';
+config.search.google_api_key = '';
+// default search param
+config.search.query = '';
+config.search.host = 'www.google.com';
+config.search.limit = '10';
+config.search.lang = 'en';
+config.search.age = 'd1';
+config.search.image = '0';
+config.search.video = '0';
+config.search.hub = '0';
+config.search.servicedesk = '0';
+
+// export config
+module.exports = config;
